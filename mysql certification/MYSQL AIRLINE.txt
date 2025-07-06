@@ -1,0 +1,275 @@
+-- ==========================================================
+-- Air Cargo Analysis Project - Full SQL Script
+-- Author: T
+-- Date:   [Today's Date]
+-- ==========================================================
+
+-- 1. Create database
+DROP DATABASE IF EXISTS air_cargo;
+CREATE DATABASE air_cargo DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;
+USE air_cargo;
+
+-- 2. Create tables
+
+-- Customer Table
+DROP TABLE IF EXISTS customer;
+CREATE TABLE customer (
+customer_id     INT PRIMARY KEY,
+first_name      VARCHAR(50) NOT NULL,
+last_name       VARCHAR(50) NOT NULL,
+date_of_birth   DATE,
+gender          ENUM('M','F','O'),
+PRIMARY KEY (customer_id)
+);
+
+-- Routes Table
+DROP TABLE IF EXISTS route_details;
+CREATE TABLE route_details (
+route_id            INT UNIQUE NOT NULL,
+flight_num          VARCHAR(10) NOT NULL CHECK (flight_num REGEXP '^[A-Z0-9]+$'),
+origin_airport      VARCHAR(10) NOT NULL,
+destination_airport VARCHAR(10) NOT NULL,
+aircraft_id         VARCHAR(10) NOT NULL,
+distance_miles      INT NOT NULL CHECK (distance_miles > 0),
+PRIMARY KEY (route_id)
+);
+
+-- Passengers on Flights Table
+DROP TABLE IF EXISTS passengers_on_flights;
+CREATE TABLE passengers_on_flights (
+aircraft_id     VARCHAR(10) NOT NULL,
+route_id        INT NOT NULL,
+customer_id     INT NOT NULL,
+depart          VARCHAR(10) NOT NULL,
+arrival         VARCHAR(10) NOT NULL,
+seat_num        VARCHAR(10) NOT NULL,
+class_id        VARCHAR(50) NOT NULL,
+travel_date     VARCHAR(10) NOT NULL,
+flight_num      VARCHAR(10) NOT NULL,
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+FOREIGN KEY (route_id) REFERENCES route_details(route_id)
+);
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE passengers_on_flights
+SET travel_date = STR_TO_DATE(travel_date, '%d-%m-%Y')
+WHERE travel_date LIKE '__-__-____';
+
+ALTER TABLE passengers_on_flights
+MODIFY COLUMN travel_date DATE;
+
+SET SQL_SAFE_UPDATES = 1;
+
+-- Ticket Details Table
+DROP TABLE IF EXISTS ticket_details;
+CREATE TABLE ticket_details (
+p_date              VARCHAR(10) NOT NULL,
+customer_id         INT NOT NULL,
+aircraft_id         VARCHAR(10) NOT NULL,
+class_id            VARCHAR(50) NOT NULL,
+no_of_tickets       INT NOT NULL CHECK (no_of_tickets > 0),
+a_code              VARCHAR(10) NOT NULL,
+price_per_ticket    DECIMAL(10,2) NOT NULL CHECK (price_per_ticket > 0),
+brand               VARCHAR(50) NOT NULL,
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+SELECT * from ticket_details;
+
+SET SQL_SAFE_UPDATES = 0;
+UPDATE ticket_details
+SET p_date = STR_TO_DATE(p_date, '%d-%m-%Y')
+WHERE p_date LIKE '__-__-____';
+
+ALTER TABLE passengers_on_flights
+MODIFY COLUMN travel_date DATE;
+
+SET SQL_SAFE_UPDATES = 1;
+-- 3. Import your CSVs using Table Data Import Wizard in MySQL Workbench.
+-- =======================
+-- QUERIES & TASKS
+-- =======================
+
+-- 1. ER Diagram: (Draw separately using MySQL Workbench or dbdiagram.io)
+
+-- 2. Already created route_details table above with constraints.
+
+-- 3. Display all passengers who have travelled in routes 01 to 25
+SELECT * FROM passengers_on_flights WHERE route_id BETWEEN 1 AND 25;
+
+-- 4. Number of passengers and total revenue in business class
+SELECT 
+SUM(no_of_tickets) AS num_passengers,
+SUM(no_of_tickets * price_per_ticket) AS total_revenue
+FROM ticket_details
+WHERE class_id = (SELECT class_id FROM (SELECT DISTINCT class_id FROM ticket_details WHERE LOWER(class_id) LIKE '%bussiness%') t LIMIT 1); -- Or use the actual class_id for Business
+
+SELECT DISTINCT class_id FROM ticket_details;
+
+-- 5. Display full name of the customer
+SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM customer;
+
+-- 6. Customers who have registered and booked a ticket
+SELECT c.*
+FROM customer c
+JOIN ticket_details t ON c.customer_id = t.customer_id;
+
+-- 7. Customer’s first and last name by customer ID and brand (Emirates)
+SELECT c.first_name, c.last_name
+FROM customer c
+JOIN ticket_details t ON c.customer_id = t.customer_id
+WHERE t.brand = 'Emirates';
+
+-- 8. Customers who have travelled by Economy Plus class (using GROUP BY/HAVING)
+SELECT customer_id, COUNT(*) AS trips
+FROM passengers_on_flights
+WHERE class_id = (SELECT class_id FROM (SELECT DISTINCT class_id FROM passengers_on_flights WHERE LOWER(class_id) LIKE '%economy plus%') t LIMIT 1) -- Replace with actual class_id for Economy Plus
+GROUP BY customer_id
+HAVING trips > 0;
+
+-- 9. Revenue crossed 10000? (IF clause)
+SELECT 
+IF(SUM(no_of_tickets * price_per_ticket) > 10000, 'Yes', 'No') AS revenue_crossed_10000
+FROM ticket_details;
+
+-- 10. Create and grant access to a new user
+CREATE USER 'aircargo_user'@'localhost' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON air_cargo.* TO 'aircargo_user'@'localhost';
+
+-- 11. Max ticket price for each class (window function)
+SELECT 
+class_id, 
+price_per_ticket,
+MAX(price_per_ticket) OVER (PARTITION BY class_id) AS max_price_per_class
+FROM ticket_details;
+
+-- 12. Passengers whose route_id=4 (add index for performance)
+CREATE INDEX idx_route_id ON passengers_on_flights(route_id);
+SELECT * FROM passengers_on_flights WHERE route_id = 4;
+
+-- 13. Execution plan for above query
+EXPLAIN SELECT * FROM passengers_on_flights WHERE route_id = 4;
+
+-- 14. Total price of all tickets booked by a customer across different aircraft IDs (ROLLUP)
+SELECT 
+customer_id, 
+aircraft_id, 
+SUM(no_of_tickets * price_per_ticket) AS total_spent
+FROM ticket_details
+GROUP BY customer_id, aircraft_id WITH ROLLUP;
+
+-- 15. View: only business class customers + airline brand
+CREATE OR REPLACE VIEW business_class_customers AS
+SELECT t.customer_id, t.brand
+FROM ticket_details t
+WHERE t.class_id = (SELECT class_id FROM (SELECT DISTINCT class_id FROM ticket_details WHERE LOWER(class_id) LIKE '%bussiness%') t2 LIMIT 1); -- Use actual class_id for Business
+
+
+SELECT * FROM business_class_customers;
+
+-- 16. Stored procedure: passengers flying between range of routes (with error handling)
+DELIMITER $$
+CREATE PROCEDURE get_passengers_between_routes(IN start_route INT, IN end_route INT)
+BEGIN
+IF (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'air_cargo' AND table_name = 'passengers_on_flights') = 0 THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Table passengers_on_flights does not exist!';
+ELSE
+    SELECT * FROM passengers_on_flights WHERE route_id BETWEEN start_route AND end_route;
+END IF;
+END $$
+DELIMITER ;
+
+-- To call:
+CALL get_passengers_between_routes(1, 10);
+
+-- 17. Stored procedure: details from routes table where distance > 2000 miles
+DELIMITER $$
+CREATE PROCEDURE get_long_distance_routes()
+BEGIN
+SELECT * FROM route_details WHERE distance_miles > 2000;
+END $$
+DELIMITER ;
+
+-- To call:
+CALL get_long_distance_routes();
+
+-- 18. Stored procedure: group flights by distance category
+DELIMITER $$
+CREATE PROCEDURE categorize_flight_distances()
+BEGIN
+SELECT 
+    flight_num,
+    distance_miles,
+    CASE
+        WHEN distance_miles >= 0 AND distance_miles <= 2000 THEN 'SDT'
+        WHEN distance_miles > 2000 AND distance_miles <= 6500 THEN 'IDT'
+        WHEN distance_miles > 6500 THEN 'LDT'
+        ELSE 'UNKNOWN'
+    END AS distance_category
+FROM route_details;
+END $$
+DELIMITER ;
+
+-- To call:
+CALL categorize_flight_distances();
+
+-- 19. Stored function + proc: complimentary services for class
+DELIMITER $$
+CREATE FUNCTION complimentary_services(class_id_in VARCHAR(50)) RETURNS VARCHAR(3)
+DETERMINISTIC
+BEGIN
+DECLARE result VARCHAR(3);
+IF class_id_in IN (
+    -- Replace these with actual class_ids for Business and Economy Plus
+    (SELECT class_id FROM ticket_details WHERE LOWER(class_id) LIKE '%bussiness%' LIMIT 1),
+    (SELECT class_id FROM ticket_details WHERE LOWER(class_id) LIKE '%economy plus%' LIMIT 1)
+) THEN
+    SET result = 'Yes';
+ELSE
+    SET result = 'No';
+END IF;
+RETURN result;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE get_complimentary_services()
+BEGIN
+SELECT 
+    p_date, customer_id, class_id, 
+    complimentary_services(class_id) AS complimentary
+FROM ticket_details;
+END $$
+DELIMITER ;
+
+-- To call:
+
+CALL get_complimentary_services();
+
+-- 20. Cursor: first record of customer whose last name ends with Scott
+DELIMITER $$
+CREATE PROCEDURE get_first_scott_customer()
+BEGIN
+DECLARE done INT DEFAULT FALSE;
+DECLARE cid INT;
+DECLARE fname VARCHAR(50);
+DECLARE lname VARCHAR(50);
+DECLARE cur CURSOR FOR 
+    SELECT customer_id, first_name, last_name FROM customer WHERE last_name LIKE '%Scott';
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+OPEN cur;
+FETCH cur INTO cid, fname, lname;
+IF NOT done THEN
+    SELECT cid AS customer_id, fname AS first_name, lname AS last_name;
+END IF;
+CLOSE cur;
+END $$
+DELIMITER ;
+
+-- To call:
+CALL get_first_scott_customer();
+
+-- ==========================================================
+-- End of Script
+-- ==========================================================
