@@ -1,38 +1,45 @@
-# Project 3: Exploratory Data Analysis of Mobile App Ratings
+# Project 3: 
+
+Online Car Rental Platform (OOP)
 
 ### Overview
-This project is an exploratory data analysis (EDA) of a mobile app dataset. The goal was to use data visualization to investigate how user ratings are distributed and whether they are influenced by factors like app type (free vs. paid), content rating, and category.
+This project is a console-based car rental platform built using Object-Oriented Programming (OOP) in Python. It simulates a real-world rental service where customers can view available cars, rent them on an hourly, daily, or weekly basis, and receive an automatically calculated bill upon return. The project emphasizes clean, modular code design and the practical application of OOP principles.
 
 ### Tools Used
 - **Language:** Python 3.x
-- **Libraries:**
-- **pandas:** For data loading and manipulation.
-- **matplotlib & seaborn:** For creating insightful visualizations.
+- **IDE:** Jupyter Notebook
+- **Modules:** `datetime` (for handling rental time and billing calculations)
 
 ### Key Skills
-- Exploratory Data Analysis (EDA)
-- Data Visualization (Box Plots, Bar Charts)
-- Statistical Summary and Interpretation
-- Data-Driven Insight Generation
+- **Object-Oriented Programming (OOP):**
+- Designing classes (`CarRental`, `Customer`) and objects.
+- Encapsulation of data and methods.
+- Creating modular and reusable code.
+- **Software Design:** Decomposing a problem statement into logical classes and functions.
+- **Application Logic:** Managing inventory (state), handling user input, and performing time-based calculations.
+- **Modularity:** The core logic is built in a separate `car_rental.py` module, which is then imported and used by the main application script.
 
 ### Screenshots
+*A screenshot of the running application's main menu and user interaction would go here.*
 
-#### Key Visualizations
-*   **Ratings are similar for Free vs. Paid apps, but Paid apps have fewer very low ratings.**
-  
+**(Example Placeholder)**
+Welcome to the Online Car Rental Platform! Please enter your name: Alex
 
-*   **App ratings are fairly consistent across different content ratings.**
-  
+--- Main Menu ---
 
-*   **Most app categories have a mean rating between 4.0 and 4.4.**
-  
+View available cars
+Rent a car
+Return a car
+Exit Enter your choice (1-4): 2
+--- Rent a Car --- Rental options: hourly - Rent by the hour daily - Rent by the day weekly - Rent by the week Enter rental type (hourly/daily/weekly): hourly How many cars would you like to rent? 3 [SUCCESS] Rental started at 2025-07-06 20:00:08. Enjoy your ride!
 
-### Key Learnings & Insights
-- **App Type:** While both Free and Paid apps have a similar median rating of around 4.3, Paid apps appear to have a tighter distribution and fewer extremely low-rated outliers. This suggests a potentially more consistent user experience for apps that require payment.
-- **Content Rating:** There is no strong evidence to suggest that an app's content rating (e.g., "Everyone," "Teen," "Mature 17+") significantly impacts its average user rating.
-- **Category:** Most app categories perform similarly, with average ratings clustering closely together. "Events" and "Education" apps have the highest mean ratings, while "Dating" apps have the lowest, though the overall variance between categories is small.
+
+### Key Learnings
+- **OOP Design:** Gained practical experience in structuring a program around objects, which makes the code more organized, scalable, and easier to maintain.
+- **State Management:** Learned to manage the state of an application (e.g., car inventory) within a class, ensuring that data is modified only through defined methods.
+- **Modularity:** Understood the importance of separating core business logic (the `CarRental` module) from the user interface (the main script), which allows for easier testing and future updates (e.g., adding a GUI).
 
 ### Future Improvements
-- **Predictive Modeling:** Build a machine learning model to predict app ratings based on available features.
-- **Sentiment Analysis:** If user reviews were available, perform sentiment analysis to extract more nuanced insights than a simple star rating can provide.
-- **Analyze Other Features:** Investigate the impact of other variables like the number of installs, last updated date, and app size on user ratings.
+- **Data Persistence:** Implement a system to save and load the rental inventory and customer data to a file (e.g., CSV, JSON) or a database (e.g., SQLite), so the application's state is not lost on exit.
+- **Graphical User Interface (GUI):** Replace the console-based menu with a graphical interface using a library like Tkinter, PyQt, or a web framework like Flask.
+- **Expanded Features:** Add more complexity, such as different car types with different pricing, user accounts with rental history, and late-fee calculations.

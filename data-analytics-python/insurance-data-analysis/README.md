@@ -1,43 +1,45 @@
-# Project 2: Online Car Rental Platform (OOP)
+# Project 2: Insurance Cost Prediction using Regression Analysis
 
 ### Overview
-This project is a console-based car rental platform built using Object-Oriented Programming (OOP) in Python. It simulates a real-world rental service where customers can view available cars, rent them on an hourly, daily, or weekly basis, and receive an automatically calculated bill upon return. The project emphasizes clean, modular code design and the practical application of OOP principles.
+This project involves a comprehensive analysis of a medical insurance dataset to identify the key factors that influence premium charges. The primary objective is to perform Exploratory Data Analysis (EDA) to uncover relationships between policyholder attributes (like age, BMI, and smoking status) and their insurance costs, and then to build a regression model to predict these charges.
 
 ### Tools Used
 - **Language:** Python 3.x
-- **IDE:** Jupyter Notebook
-- **Modules:** `datetime` (for handling rental time and billing calculations)
+- **Libraries:**
+- **pandas:** For data manipulation and cleaning.
+- **NumPy:** For numerical operations.
+- **matplotlib & seaborn:** For data visualization.
+- **scikit-learn:** For building and evaluating the regression model.
 
 ### Key Skills
-- **Object-Oriented Programming (OOP):**
-- Designing classes (`CarRental`, `Customer`) and objects.
-- Encapsulation of data and methods.
-- Creating modular and reusable code.
-- **Software Design:** Decomposing a problem statement into logical classes and functions.
-- **Application Logic:** Managing inventory (state), handling user input, and performing time-based calculations.
-- **Modularity:** The core logic is built in a separate `car_rental.py` module, which is then imported and used by the main application script.
+- Data Cleaning & Preprocessing
+- Exploratory Data Analysis (EDA)
+- Data Visualization (Scatter Plots, Box Plots, Heatmaps)
+- Feature Engineering (One-Hot Encoding)
+- Predictive Modeling (Linear Regression)
+- Model Evaluation & Interpretation
 
 ### Screenshots
-*A screenshot of the running application's main menu and user interaction would go here.*
 
-**(Example Placeholder)**
-Welcome to the Online Car Rental Platform! Please enter your name: Alex
+#### Key Relationships Discovered
+*   **Smoking is the dominant factor for high charges.**
+  
 
---- Main Menu ---
+*   **Charges increase with age and BMI, especially for smokers.**
+  
+  
 
-View available cars
-Rent a car
-Return a car
-Exit Enter your choice (1-4): 2
---- Rent a Car --- Rental options: hourly - Rent by the hour daily - Rent by the day weekly - Rent by the week Enter rental type (hourly/daily/weekly): hourly How many cars would you like to rent? 3 [SUCCESS] Rental started at 2025-07-06 20:00:08. Enjoy your ride!
+#### Correlation of Features
+*   The correlation heatmap confirms that `smoker_yes` has the strongest correlation (0.79) with `charges`.
+  
 
-
-### Key Learnings
-- **OOP Design:** Gained practical experience in structuring a program around objects, which makes the code more organized, scalable, and easier to maintain.
-- **State Management:** Learned to manage the state of an application (e.g., car inventory) within a class, ensuring that data is modified only through defined methods.
-- **Modularity:** Understood the importance of separating core business logic (the `CarRental` module) from the user interface (the main script), which allows for easier testing and future updates (e.g., adding a GUI).
+### Key Learnings & Insights
+- **Smoker Status:** This is the most significant predictor of insurance costs. Smokers, on average, face dramatically higher premiums than non-smokers, and this gap widens with age and higher BMI.
+- **Age & BMI:** Both have a moderate positive correlation with charges. The effect of a high BMI is much more pronounced for smokers.
+- **Other Factors:** The number of children, sex, and region have a negligible impact on insurance charges.
+- **Business Application:** The analysis provides clear, data-driven evidence for risk assessment. An insurance company can confidently use smoking status, age, and BMI as primary factors for determining premium prices.
 
 ### Future Improvements
-- **Data Persistence:** Implement a system to save and load the rental inventory and customer data to a file (e.g., CSV, JSON) or a database (e.g., SQLite), so the application's state is not lost on exit.
-- **Graphical User Interface (GUI):** Replace the console-based menu with a graphical interface using a library like Tkinter, PyQt, or a web framework like Flask.
-- **Expanded Features:** Add more complexity, such as different car types with different pricing, user accounts with rental history, and late-fee calculations.
+- **Advanced Models:** Implement more complex regression models like Gradient Boosting or XGBoost and tune their hyperparameters to potentially improve prediction accuracy.
+- **Interaction Terms:** Engineer new features that capture the interaction between variables (e.g., `bmi * smoker_status`) to help linear models capture more complex relationships.
+- **Log Transformation:** Apply a log transformation to the skewed `charges` target variable to see if it improves model performance by normalizing the distribution.
