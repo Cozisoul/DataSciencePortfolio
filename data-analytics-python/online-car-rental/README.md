@@ -1,6 +1,4 @@
-# Project 3: 
-
-Online Car Rental Platform (OOP)
+# Project 3: Online Car Rental Platform (OOP)
 
 ### Overview
 This project is a console-based car rental platform built using Object-Oriented Programming (OOP) in Python. It simulates a real-world rental service where customers can view available cars, rent them on an hourly, daily, or weekly basis, and receive an automatically calculated bill upon return. The project emphasizes clean, modular code design and the practical application of OOP principles.
