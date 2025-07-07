@@ -30,5 +30,8 @@ This project applies predictive analytics techniques in Excel to estimate restau
 - Compare Excel-based results with those from Python/R for validation.
 
 ## Screenshots
-![Excel dashboard displaying predicted versus actual restaurant tips, with a scatter plot showing data points and a regression line. The worksheet includes labeled columns for total bill, tip, and predicted tip, along with summary statistics such as RMSE. The environment is a typical Excel interface with gridlines and toolbars visible. The tone is analytical and business-focused.](visuals/prediction_screenshot.png)
-![Excel worksheet showing detailed regression calculations for restaurant tip prediction, including formulas, coefficients, and residuals. The sheet features clearly labeled columns and highlighted cells for key metrics. The environment is a standard Excel workspace, emphasizing data analysis and transparency. The tone is methodical and informative.](visuals/prediction_work_screenshot.png)
+[Excel dashboard displaying predicted versus actual restaurant tips, with a scatter plot showing data points and a regression line. The worksheet includes labeled columns for total bill, tip, and predicted tip, along with summary statistics such as RMSE. The environment is a typical Excel interface with gridlines and toolbars visible. The tone is analytical and business-focused.][imageReference]
+Alt text: Excel worksheet displaying detailed regression calculations for predicting restaurant tips. The primary subjects are columns labeled total bill, tip, and predicted tip, with additional columns for regression coefficients and residuals. Key metrics such as RMSE are highlighted in specific cells. The worksheet includes visible Excel gridlines, toolbars, and a methodical layout emphasizing data analysis and transparency. The tone is analytical and informative. No visible emotional content. Text in the image includes column headers: total bill, tip, predicted tip, and RMSE.
+
+
+[imageReference]: visuals/prediction_screenshot.png
