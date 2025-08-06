@@ -1,20 +1,19 @@
-# Regional Sales Analysis in Tableau
+# Crime Analysis in Tableau
 
 ## Overview
-Designed interactive dashboards in Tableau to analyze and compare sales performance across multiple regions. This project focuses on identifying high-performing and underperforming areas, spotting disparities, and uncovering growth opportunities.
+Created dashboards to visualize and analyze crime data, identifying hotspots and trends across time and location dimensions.
 
 ## Tools Used
 - Tableau
 
 ## Skills Demonstrated
-- Dashboard design and storytelling
-- Comparative analysis of regional sales trends
-- Interactive filtering for business decision-making
-- Visual trend spotting
+- Data visualization for social analysis
+- Time series and geospatial mapping
+- Building filterable, user-friendly dashboards
 
 ## Screenshots
-*Include dashboard visuals in `visuals/`.*
+*Add visuals in `visuals/`.*
 
 ## Key Learnings
-- Turning raw sales data into clear, actionable visuals for comparative analysis.
-- Building intuitive, clean Tableau dashboards that empower business users to explore data.
+- Presenting public data clearly for decision-making and policy analysis.
+- Using Tableau maps and timelines for effective insight extraction.
