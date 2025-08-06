@@ -1,0 +1,2785 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <Heatmap />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cleaned_loan_data' inline='true' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleaned_loan_data' name='textscan.17i8x0u0xl1aa219bqtt90r977ab'>
+            <connection class='textscan' directory='C:/Users/ThapeloMasebe/code/loan_defaulter_prediction/data/processed' filename='cleaned_loan_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.17i8x0u0xl1aa219bqtt90r977ab' name='cleaned_loan_data.csv' table='[cleaned_loan_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ZA' separator=','>
+            <column datatype='integer' name='uniqueid' ordinal='0' />
+            <column datatype='integer' name='disbursed_amount' ordinal='1' />
+            <column datatype='integer' name='asset_cost' ordinal='2' />
+            <column datatype='real' name='ltv' ordinal='3' />
+            <column datatype='integer' name='branch_id' ordinal='4' />
+            <column datatype='integer' name='supplier_id' ordinal='5' />
+            <column datatype='integer' name='manufacturer_id' ordinal='6' />
+            <column datatype='integer' name='current_pincode_id' ordinal='7' />
+            <column datatype='date' name='date_of_birth' ordinal='8' />
+            <column datatype='string' name='employment_type' ordinal='9' />
+            <column datatype='date' name='disbursaldate' ordinal='10' />
+            <column datatype='integer' name='state_id' ordinal='11' />
+            <column datatype='integer' name='employee_code_id' ordinal='12' />
+            <column datatype='integer' name='mobileno_avl_flag' ordinal='13' />
+            <column datatype='integer' name='aadhar_flag' ordinal='14' />
+            <column datatype='integer' name='pan_flag' ordinal='15' />
+            <column datatype='integer' name='voterid_flag' ordinal='16' />
+            <column datatype='integer' name='driving_flag' ordinal='17' />
+            <column datatype='integer' name='passport_flag' ordinal='18' />
+            <column datatype='integer' name='perform_cns_score' ordinal='19' />
+            <column datatype='string' name='perform_cns_score_description' ordinal='20' />
+            <column datatype='integer' name='pri_no_of_accts' ordinal='21' />
+            <column datatype='integer' name='pri_active_accts' ordinal='22' />
+            <column datatype='integer' name='pri_overdue_accts' ordinal='23' />
+            <column datatype='integer' name='pri_current_balance' ordinal='24' />
+            <column datatype='integer' name='pri_sanctioned_amount' ordinal='25' />
+            <column datatype='integer' name='pri_disbursed_amount' ordinal='26' />
+            <column datatype='integer' name='sec_no_of_accts' ordinal='27' />
+            <column datatype='integer' name='sec_active_accts' ordinal='28' />
+            <column datatype='integer' name='sec_overdue_accts' ordinal='29' />
+            <column datatype='integer' name='sec_current_balance' ordinal='30' />
+            <column datatype='integer' name='sec_sanctioned_amount' ordinal='31' />
+            <column datatype='integer' name='sec_disbursed_amount' ordinal='32' />
+            <column datatype='integer' name='primary_instal_amt' ordinal='33' />
+            <column datatype='integer' name='sec_instal_amt' ordinal='34' />
+            <column datatype='integer' name='new_accts_in_last_six_months' ordinal='35' />
+            <column datatype='integer' name='delinquent_accts_in_last_six_months' ordinal='36' />
+            <column datatype='string' name='average_acct_age' ordinal='37' />
+            <column datatype='string' name='credit_history_length' ordinal='38' />
+            <column datatype='integer' name='no_of_inquiries' ordinal='39' />
+            <column datatype='integer' name='loan_default' ordinal='40' />
+            <column datatype='integer' name='age' ordinal='41' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;R&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ZA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uniqueid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[uniqueid]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>uniqueid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disbursed_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[disbursed_amount]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>disbursed_amount</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>asset_cost</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[asset_cost]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>asset_cost</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ltv</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ltv]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>ltv</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>branch_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[branch_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>branch_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>supplier_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[supplier_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>supplier_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>manufacturer_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[manufacturer_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>manufacturer_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_pincode_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[current_pincode_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>current_pincode_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_of_birth</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_of_birth]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>date_of_birth</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[employment_type]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>employment_type</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disbursaldate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[disbursaldate]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>disbursaldate</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[state_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>state_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employee_code_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[employee_code_id]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>employee_code_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mobileno_avl_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mobileno_avl_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>mobileno_avl_flag</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aadhar_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aadhar_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>aadhar_flag</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pan_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pan_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pan_flag</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>voterid_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[voterid_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>voterid_flag</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>driving_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[driving_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>driving_flag</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passport_flag</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[passport_flag]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>passport_flag</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>perform_cns_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[perform_cns_score]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>perform_cns_score</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>perform_cns_score_description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[perform_cns_score_description]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>perform_cns_score_description</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_no_of_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_no_of_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_no_of_accts</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_active_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_active_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_active_accts</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_overdue_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_overdue_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_overdue_accts</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_current_balance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_current_balance]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_current_balance</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_sanctioned_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_sanctioned_amount]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_sanctioned_amount</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pri_disbursed_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pri_disbursed_amount]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>pri_disbursed_amount</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_no_of_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_no_of_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_no_of_accts</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_active_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_active_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_active_accts</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_overdue_accts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_overdue_accts]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_overdue_accts</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_current_balance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_current_balance]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_current_balance</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_sanctioned_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_sanctioned_amount]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_sanctioned_amount</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_disbursed_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_disbursed_amount]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_disbursed_amount</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_instal_amt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[primary_instal_amt]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>primary_instal_amt</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sec_instal_amt</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sec_instal_amt]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>sec_instal_amt</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_accts_in_last_six_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_accts_in_last_six_months]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>new_accts_in_last_six_months</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delinquent_accts_in_last_six_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[delinquent_accts_in_last_six_months]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>delinquent_accts_in_last_six_months</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_acct_age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[average_acct_age]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>average_acct_age</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>credit_history_length</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[credit_history_length]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>credit_history_length</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>no_of_inquiries</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[no_of_inquiries]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>no_of_inquiries</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loan_default</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[loan_default]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>loan_default</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[cleaned_loan_data.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+      </column>
+      <column caption='Default Rate' datatype='real' datatype-customized='true' default-format='p0.0%' name='[Calculation_2241385276218085376]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(IF [loan_default] = 1 THEN 1 ELSE 0 END) / COUNT([loan_default])' />
+      </column>
+      <column caption='Total Applicants' datatype='integer' name='[Calculation_2241385276219588609]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='// COUNTD means Count Distinct&#13;&#10;COUNTD([uniqueid])' />
+      </column>
+      <column caption='cleaned_loan_data.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]' role='measure' type='quantitative' />
+      <column caption='Aadhar Flag' datatype='integer' name='[aadhar_flag]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Asset Cost' datatype='integer' name='[asset_cost]' role='measure' type='quantitative' />
+      <column caption='Average Acct Age' datatype='string' name='[average_acct_age]' role='dimension' type='nominal' />
+      <column caption='Branch Id' datatype='integer' name='[branch_id]' role='dimension' type='ordinal' />
+      <column caption='Credit History Length' datatype='string' name='[credit_history_length]' role='dimension' type='nominal' />
+      <column caption='Current Pincode Id' datatype='integer' name='[current_pincode_id]' role='dimension' type='ordinal' />
+      <column caption='Date Of Birth' datatype='date' name='[date_of_birth]' role='dimension' type='ordinal' />
+      <column caption='Delinquent Accts In Last Six Months' datatype='integer' name='[delinquent_accts_in_last_six_months]' role='measure' type='quantitative' />
+      <column caption='Disbursaldate' datatype='date' name='[disbursaldate]' role='dimension' type='ordinal' />
+      <column caption='Disbursed Amount' datatype='integer' name='[disbursed_amount]' role='measure' type='quantitative' />
+      <column caption='Driving Flag' datatype='integer' name='[driving_flag]' role='measure' type='quantitative' />
+      <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+      <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0' value='Non-Defaulter' />
+          <alias key='1' value='Defaulter' />
+        </aliases>
+      </column>
+      <column caption='Ltv' datatype='real' name='[ltv]' role='measure' type='quantitative' />
+      <column caption='Manufacturer Id' datatype='integer' name='[manufacturer_id]' role='dimension' type='ordinal' />
+      <column caption='Mobileno Avl Flag' datatype='integer' name='[mobileno_avl_flag]' role='measure' type='quantitative' />
+      <column caption='New Accts In Last Six Months' datatype='integer' name='[new_accts_in_last_six_months]' role='measure' type='quantitative' />
+      <column caption='No Of Inquiries' datatype='integer' name='[no_of_inquiries]' role='measure' type='quantitative' />
+      <column caption='Pan Flag' datatype='integer' name='[pan_flag]' role='measure' type='quantitative' />
+      <column caption='Passport Flag' datatype='integer' name='[passport_flag]' role='measure' type='quantitative' />
+      <column caption='Perform Cns Score' datatype='integer' name='[perform_cns_score]' role='measure' type='quantitative' />
+      <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+      <column caption='Pri Active Accts' datatype='integer' name='[pri_active_accts]' role='measure' type='quantitative' />
+      <column caption='Pri Current Balance' datatype='integer' name='[pri_current_balance]' role='measure' type='quantitative' />
+      <column caption='Pri Disbursed Amount' datatype='integer' name='[pri_disbursed_amount]' role='measure' type='quantitative' />
+      <column caption='Pri No Of Accts' datatype='integer' name='[pri_no_of_accts]' role='measure' type='quantitative' />
+      <column caption='Pri Overdue Accts' datatype='integer' name='[pri_overdue_accts]' role='measure' type='quantitative' />
+      <column caption='Pri Sanctioned Amount' datatype='integer' name='[pri_sanctioned_amount]' role='measure' type='quantitative' />
+      <column caption='Primary Instal Amt' datatype='integer' name='[primary_instal_amt]' role='measure' type='quantitative' />
+      <column caption='Sec Active Accts' datatype='integer' name='[sec_active_accts]' role='measure' type='quantitative' />
+      <column caption='Sec Current Balance' datatype='integer' name='[sec_current_balance]' role='measure' type='quantitative' />
+      <column caption='Sec Disbursed Amount' datatype='integer' name='[sec_disbursed_amount]' role='measure' type='quantitative' />
+      <column caption='Sec Instal Amt' datatype='integer' name='[sec_instal_amt]' role='measure' type='quantitative' />
+      <column caption='Sec No Of Accts' datatype='integer' name='[sec_no_of_accts]' role='measure' type='quantitative' />
+      <column caption='Sec Overdue Accts' datatype='integer' name='[sec_overdue_accts]' role='measure' type='quantitative' />
+      <column caption='Sec Sanctioned Amount' datatype='integer' name='[sec_sanctioned_amount]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+      <column caption='Supplier Id' datatype='integer' name='[supplier_id]' role='dimension' type='ordinal' />
+      <column caption='Uniqueid' datatype='integer' name='[uniqueid]' role='measure' type='quantitative' />
+      <column caption='Voterid Flag' datatype='integer' name='[voterid_flag]' role='measure' type='quantitative' />
+      <column-instance column='[loan_default]' derivation='None' name='[none:loan_default:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Age (bin),Employment Type)' hidden='true' name='[Action (Age (bin),Employment Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Age (bin)]' />
+          <groupfilter function='level-members' level='[employment_type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Employee Code Id,Loan Default)' hidden='true' name='[Action (Employee Code Id,Loan Default)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[employee_code_id]' />
+          <groupfilter function='level-members' level='[loan_default]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/THAPEL~1/AppData/Local/Temp/TableauTemp/#TableauTemp_09r7yig15s7mng115ali61dxzxg3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/05/2025 09:58:19 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>uniqueid</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[uniqueid]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>uniqueid</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>233154</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>disbursed_amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[disbursed_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>disbursed_amount</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11560</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>asset_cost</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[asset_cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>asset_cost</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44537</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ltv</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ltv]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ltv</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16903</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>branch_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[branch_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>branch_id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>supplier_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[supplier_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>supplier_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8082</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>manufacturer_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[manufacturer_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>manufacturer_id</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>current_pincode_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[current_pincode_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>current_pincode_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13321</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date_of_birth</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date_of_birth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date_of_birth</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>27997</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>employment_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[employment_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>employment_type</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>disbursaldate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[disbursaldate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>disbursaldate</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>93</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>state_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[state_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state_id</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>employee_code_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[employee_code_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>employee_code_id</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>14032</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mobileno_avl_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[mobileno_avl_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mobileno_avl_flag</remote-alias>
+              <ordinal>13</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>aadhar_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[aadhar_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>aadhar_flag</remote-alias>
+              <ordinal>14</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pan_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pan_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pan_flag</remote-alias>
+              <ordinal>15</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>voterid_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[voterid_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>voterid_flag</remote-alias>
+              <ordinal>16</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>driving_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[driving_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>driving_flag</remote-alias>
+              <ordinal>17</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>passport_flag</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[passport_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>passport_flag</remote-alias>
+              <ordinal>18</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>perform_cns_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[perform_cns_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>perform_cns_score</remote-alias>
+              <ordinal>19</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1873</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>perform_cns_score_description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[perform_cns_score_description]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>perform_cns_score_description</remote-alias>
+              <ordinal>20</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_no_of_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_no_of_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_no_of_accts</remote-alias>
+              <ordinal>21</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_active_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_active_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_active_accts</remote-alias>
+              <ordinal>22</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_overdue_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_overdue_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_overdue_accts</remote-alias>
+              <ordinal>23</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>176</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_current_balance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_current_balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_current_balance</remote-alias>
+              <ordinal>24</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>93804</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_sanctioned_amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_sanctioned_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_sanctioned_amount</remote-alias>
+              <ordinal>25</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16520</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pri_disbursed_amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[pri_disbursed_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pri_disbursed_amount</remote-alias>
+              <ordinal>26</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19357</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_no_of_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_no_of_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_no_of_accts</remote-alias>
+              <ordinal>27</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_active_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_active_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_active_accts</remote-alias>
+              <ordinal>28</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_overdue_accts</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_overdue_accts]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_overdue_accts</remote-alias>
+              <ordinal>29</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_current_balance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_current_balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_current_balance</remote-alias>
+              <ordinal>30</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4413</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_sanctioned_amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_sanctioned_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_sanctioned_amount</remote-alias>
+              <ordinal>31</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4413</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_disbursed_amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_disbursed_amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_disbursed_amount</remote-alias>
+              <ordinal>32</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4413</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primary_instal_amt</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[primary_instal_amt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primary_instal_amt</remote-alias>
+              <ordinal>33</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37295</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sec_instal_amt</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sec_instal_amt]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sec_instal_amt</remote-alias>
+              <ordinal>34</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2229</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_accts_in_last_six_months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[new_accts_in_last_six_months]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>new_accts_in_last_six_months</remote-alias>
+              <ordinal>35</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>delinquent_accts_in_last_six_months</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[delinquent_accts_in_last_six_months]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>delinquent_accts_in_last_six_months</remote-alias>
+              <ordinal>36</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_acct_age</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[average_acct_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>average_acct_age</remote-alias>
+              <ordinal>37</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>246</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>credit_history_length</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[credit_history_length]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>credit_history_length</remote-alias>
+              <ordinal>38</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>467</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>no_of_inquiries</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[no_of_inquiries]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>no_of_inquiries</remote-alias>
+              <ordinal>39</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>loan_default</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[loan_default]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loan_default</remote-alias>
+              <ordinal>40</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>41</ordinal>
+              <family>cleaned_loan_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[none:loan_default:ok]' type='shape'>
+            <map to='circle'>
+              <bucket>1</bucket>
+            </map>
+            <map to='square'>
+              <bucket>0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:loan_default:ok]' type='palette'>
+            <map to='#24693d'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#ae123a'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cleaned_loan_data.csv' id='cleaned_loan_data.csv_16728F6173D941DA96911AC0F1E0835E'>
+            <properties context=''>
+              <relation connection='textscan.17i8x0u0xl1aa219bqtt90r977ab' name='cleaned_loan_data.csv' table='[cleaned_loan_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ZA' separator=','>
+                  <column datatype='integer' name='uniqueid' ordinal='0' />
+                  <column datatype='integer' name='disbursed_amount' ordinal='1' />
+                  <column datatype='integer' name='asset_cost' ordinal='2' />
+                  <column datatype='real' name='ltv' ordinal='3' />
+                  <column datatype='integer' name='branch_id' ordinal='4' />
+                  <column datatype='integer' name='supplier_id' ordinal='5' />
+                  <column datatype='integer' name='manufacturer_id' ordinal='6' />
+                  <column datatype='integer' name='current_pincode_id' ordinal='7' />
+                  <column datatype='date' name='date_of_birth' ordinal='8' />
+                  <column datatype='string' name='employment_type' ordinal='9' />
+                  <column datatype='date' name='disbursaldate' ordinal='10' />
+                  <column datatype='integer' name='state_id' ordinal='11' />
+                  <column datatype='integer' name='employee_code_id' ordinal='12' />
+                  <column datatype='integer' name='mobileno_avl_flag' ordinal='13' />
+                  <column datatype='integer' name='aadhar_flag' ordinal='14' />
+                  <column datatype='integer' name='pan_flag' ordinal='15' />
+                  <column datatype='integer' name='voterid_flag' ordinal='16' />
+                  <column datatype='integer' name='driving_flag' ordinal='17' />
+                  <column datatype='integer' name='passport_flag' ordinal='18' />
+                  <column datatype='integer' name='perform_cns_score' ordinal='19' />
+                  <column datatype='string' name='perform_cns_score_description' ordinal='20' />
+                  <column datatype='integer' name='pri_no_of_accts' ordinal='21' />
+                  <column datatype='integer' name='pri_active_accts' ordinal='22' />
+                  <column datatype='integer' name='pri_overdue_accts' ordinal='23' />
+                  <column datatype='integer' name='pri_current_balance' ordinal='24' />
+                  <column datatype='integer' name='pri_sanctioned_amount' ordinal='25' />
+                  <column datatype='integer' name='pri_disbursed_amount' ordinal='26' />
+                  <column datatype='integer' name='sec_no_of_accts' ordinal='27' />
+                  <column datatype='integer' name='sec_active_accts' ordinal='28' />
+                  <column datatype='integer' name='sec_overdue_accts' ordinal='29' />
+                  <column datatype='integer' name='sec_current_balance' ordinal='30' />
+                  <column datatype='integer' name='sec_sanctioned_amount' ordinal='31' />
+                  <column datatype='integer' name='sec_disbursed_amount' ordinal='32' />
+                  <column datatype='integer' name='primary_instal_amt' ordinal='33' />
+                  <column datatype='integer' name='sec_instal_amt' ordinal='34' />
+                  <column datatype='integer' name='new_accts_in_last_six_months' ordinal='35' />
+                  <column datatype='integer' name='delinquent_accts_in_last_six_months' ordinal='36' />
+                  <column datatype='string' name='average_acct_age' ordinal='37' />
+                  <column datatype='string' name='credit_history_length' ordinal='38' />
+                  <column datatype='integer' name='no_of_inquiries' ordinal='39' />
+                  <column datatype='integer' name='loan_default' ordinal='40' />
+                  <column datatype='integer' name='age' ordinal='41' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+      <datasources>
+        <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+      </datasources>
+      <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+        <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+        <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+        <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+        <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+        <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+        <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]' included-values='in-range'>
+        <min>25</min>
+        <max>76</max>
+      </filter>
+      <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]'>
+        <groupfilter function='level-members' level='[none:employment_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]'>
+        <groupfilter function='level-members' level='[none:perform_cns_score_description:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]'>
+        <groupfilter function='level-members' level='[none:state_id:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_F068162F28614428ADF2F964B673833B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Heatmap - Age &amp; Employment' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_2457BCF81FC64680890AD464FF55A711]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Map - State Default Rate' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_4DBEFC853E2649D6A615DA88881F99FA]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Scatter - LTV vs Disbursed' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_C7CB1718CF4D43C9859B0B97BBCC6033]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Box - CNS Score' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Box - CNS Score'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employee_code_id]' derivation='None' name='[none:employee_code_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[loan_default]' derivation='None' name='[none:loan_default:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score' datatype='integer' name='[perform_cns_score]' role='measure' type='quantitative' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[perform_cns_score]' derivation='Sum' name='[sum:perform_cns_score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' />
+              <lod column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employee_code_id:ok]' />
+            </encodings>
+            <reference-line axis-column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:perform_cns_score:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:perform_cns_score:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-transparency' value='142' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:perform_cns_score:qk]</rows>
+        <cols>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]</cols>
+      </table>
+      <simple-id uuid='{E7730726-4EA9-4AED-8B1D-4B757CFB1C2E}' />
+    </worksheet>
+    <worksheet name='Heatmap - Age &amp; Employment'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Default Rate' datatype='real' datatype-customized='true' default-format='p0.0%' name='[Calculation_2241385276218085376]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [loan_default] = 1 THEN 1 ELSE 0 END) / COUNT([loan_default])' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[Calculation_2241385276218085376]' derivation='User' name='[usr:Calculation_2241385276218085376:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]' value='33' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' />
+              <lod column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='density-kernel-size' value='14.547999382019043' />
+                <format attr='size' value='1.8350828886032104' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:Age (bin):ok]</rows>
+        <cols>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</cols>
+        <show-full-range>
+          <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{A828E83F-0844-4500-8061-DCAB51EC2920}' />
+    </worksheet>
+    <worksheet name='KPI - Avg CNS Score'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='2' fontcolor='#000000'>Avg. Bureau Score</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Default Rate' datatype='real' datatype-customized='true' default-format='p0.0%' name='[Calculation_2241385276218085376]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [loan_default] = 1 THEN 1 ELSE 0 END) / COUNT([loan_default])' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[perform_cns_score]' derivation='Avg' name='[avg:perform_cns_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[loan_default]' derivation='None' name='[none:loan_default:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score' datatype='integer' name='[perform_cns_score]' role='measure' type='quantitative' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[Calculation_2241385276218085376]' derivation='User' name='[usr:Calculation_2241385276218085376:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>1</bucket>
+              <bucket>0</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' />
+              <text column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[avg:perform_cns_score:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>&lt;</run>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[avg:perform_cns_score:qk]</run>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]</cols>
+      </table>
+      <simple-id uuid='{374771E8-5EE8-4DB9-AE6E-6B112A399ADD}' />
+    </worksheet>
+    <worksheet name='KPI - Default Rate.'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='2' fontcolor='#000000'>Overall Default Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Default Rate' datatype='real' datatype-customized='true' default-format='p0.0%' name='[Calculation_2241385276218085376]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [loan_default] = 1 THEN 1 ELSE 0 END) / COUNT([loan_default])' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[Calculation_2241385276218085376]' derivation='User' name='[usr:Calculation_2241385276218085376:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'>&lt;</run>
+                <run bold='true' fontsize='24'>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]</run>
+                <run bold='true' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E7FF6DB0-B497-4C21-8C85-9E54A4FF29A3}' />
+    </worksheet>
+    <worksheet name='KPI - Disbursed Amount'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='2'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Disbursed Amount' datatype='integer' name='[disbursed_amount]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[disbursed_amount]' derivation='Sum' name='[sum:disbursed_amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:disbursed_amount:qk]' value='C1033%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:disbursed_amount:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:disbursed_amount:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:disbursed_amount:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A61F9E64-951D-4806-9A19-2BD090DE7211}' />
+    </worksheet>
+    <worksheet name='KPI - Total Defaulters'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='2' fontcolor='#000000'>Total Defaulters</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[loan_default]' derivation='Sum' name='[sum:loan_default:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:loan_default:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>&lt;</run>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:loan_default:qk]</run>
+                <run bold='true' fontname='Tableau Light' fontsize='24'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{86405EF6-D51A-4DB8-8801-01044446EA6D}' />
+    </worksheet>
+    <worksheet name='Map - State Default Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Default Rate' datatype='real' datatype-customized='true' default-format='p0.0%' name='[Calculation_2241385276218085376]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(IF [loan_default] = 1 THEN 1 ELSE 0 END) / COUNT([loan_default])' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[Calculation_2241385276218085376]' derivation='User' name='[usr:Calculation_2241385276218085376:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_4DBEFC853E2649D6A615DA88881F99FA]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</rows>
+        <cols>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]</cols>
+      </table>
+      <simple-id uuid='{BB7F7CDD-8820-4F31-AC10-14AB4EDD8974}' />
+    </worksheet>
+    <worksheet name='Scatter - LTV vs Disbursed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000'>Loan-to-Value (LTV) vs. Disbursed Amount</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[age]' peg='0' size='5' />
+            </column>
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column caption='Disbursed Amount' datatype='integer' name='[disbursed_amount]' role='measure' type='quantitative' />
+            <column caption='Employee Code Id' datatype='integer' name='[employee_code_id]' role='dimension' type='ordinal' />
+            <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='Loan Default' datatype='integer' name='[loan_default]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0' value='Non-Defaulter' />
+                <alias key='1' value='Defaulter' />
+              </aliases>
+            </column>
+            <column caption='Ltv' datatype='real' name='[ltv]' role='measure' type='quantitative' />
+            <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[employee_code_id]' derivation='None' name='[none:employee_code_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[loan_default]' derivation='None' name='[none:loan_default:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Perform Cns Score' datatype='integer' name='[perform_cns_score]' role='measure' type='quantitative' />
+            <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+            <column-instance column='[disbursed_amount]' derivation='Sum' name='[sum:disbursed_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ltv]' derivation='Sum' name='[sum:ltv:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[perform_cns_score]' derivation='Sum' name='[sum:perform_cns_score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_F068162F28614428ADF2F964B673833B]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Age (bin)]' />
+              <groupfilter function='level-members' level='[employment_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action4_C7CB1718CF4D43C9859B0B97BBCC6033]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[employee_code_id]' />
+              <groupfilter function='level-members' level='[loan_default]' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>1</bucket>
+              <bucket>0</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Employee Code Id,Loan Default)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[Action (Age (bin),Employment Type)]</column>
+            <column>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' />
+              <size column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:perform_cns_score:qk]' />
+              <lod column='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employee_code_id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.2154695987701416' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='mark-transparency' value='185' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:disbursed_amount:qk]</rows>
+        <cols>[federated.00wjbho0isxxgv16ssaw40jr8e2j].[sum:ltv:qk]</cols>
+      </table>
+      <simple-id uuid='{81A7E159-FD69-4B6A-8EDA-020040898477}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='cleaned_loan_data' name='federated.00wjbho0isxxgv16ssaw40jr8e2j' />
+      </datasources>
+      <datasource-dependencies datasource='federated.00wjbho0isxxgv16ssaw40jr8e2j'>
+        <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+        <column caption='Employment Type' datatype='string' name='[employment_type]' role='dimension' type='nominal' />
+        <column-instance column='[age]' derivation='None' name='[none:age:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[employment_type]' derivation='None' name='[none:employment_type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[perform_cns_score_description]' derivation='None' name='[none:perform_cns_score_description:nk]' pivot='key' type='nominal' />
+        <column-instance column='[state_id]' derivation='None' name='[none:state_id:ok]' pivot='key' type='ordinal' />
+        <column caption='Perform Cns Score Description' datatype='string' name='[perform_cns_score_description]' role='dimension' type='nominal' />
+        <column aggregation='Sum' caption='State Id' datatype='integer' name='[state_id]' role='dimension' semantic-role='[State].[Name]' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98414' id='30' param='horz' type-v2='layout-flow' w='99166' x='417' y='793'>
+            <zone h='98414' id='28' type-v2='layout-basic' w='99166' x='417' y='793'>
+              <zone h='6301' id='3' param='vert' type-v2='layout-flow' w='50716' x='417' y='793'>
+                <zone forceUpdate='true' h='5550' id='5' type-v2='text' w='50716' x='417' y='793'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Vehicle Loan Default Risk Management Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='43871' id='23' is-fixed='true' type-v2='layout-basic' w='99166' x='417' y='55336'>
+                <zone h='43871' id='7' param='horz' type-v2='layout-flow' w='50715' x='417' y='55336'>
+                  <zone fixed-size='1265' h='43871' id='19' is-fixed='true' name='Scatter - LTV vs Disbursed' w='50715' x='417' y='55336'>
+                    <layout-cache minwidth='163' type-h='fixed' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='background-color' value='#f5f5f5' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='43871' id='24' param='horz' type-v2='layout-flow' w='48451' x='51132' y='55336'>
+                  <zone h='43871' id='22' name='Box - CNS Score' w='48451' x='51132' y='55336'>
+                    <layout-cache cell-count-w='2' minheight='164' non-cell-size-w='66' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='38636' id='17' is-fixed='true' type-v2='layout-basic' w='99166' x='417' y='16700'>
+                <zone h='38636' id='8' param='horz' type-v2='layout-flow' w='50710' x='417' y='16700'>
+                  <zone h='38636' id='14' name='Map - State Default Rate' w='50710' x='417' y='16700'>
+                    <layout-cache fixed-size-h='44' minwidth='180' type-h='fixed' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='background-color' value='#f5f5f5' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='38636' id='18' param='vert' type-v2='layout-flow' w='48456' x='51127' y='16700'>
+                  <zone h='38631' id='16' name='Heatmap - Age &amp; Employment' w='48456' x='51127' y='16700'>
+                    <layout-cache cell-count-h='11' cell-count-w='2' non-cell-size-h='96' non-cell-size-w='81' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='background-color' value='#f5f5f5' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='9606' id='25' is-fixed='true' type-v2='layout-basic' w='99166' x='417' y='7094'>
+                <zone h='9606' id='9' param='horz' type-v2='layout-flow' w='57155' x='417' y='7094'>
+                  <zone fixed-size='109' h='9606' id='20' is-fixed='true' name='Scatter - LTV vs Disbursed' pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' type-v2='color' w='6097' x='417' y='7094'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='background-color' value='#ffffff' />
+                    </zone-style>
+                  </zone>
+                  <zone h='9606' id='35' name='KPI - Default Rate.' w='20865' x='6514' y='7094'>
+                    <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone fixed-size='171' h='9606' id='12' is-fixed='true' name='KPI - Total Defaulters' w='9328' x='27379' y='7094'>
+                    <layout-cache type-h='fixed' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='9606' id='11' name='KPI - Disbursed Amount' w='20865' x='36707' y='7094'>
+                    <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='9606' id='26' param='horz' type-v2='layout-flow' w='42011' x='57572' y='7094'>
+                  <zone fixed-size='644' h='9606' id='13' is-fixed='true' name='KPI - Avg CNS Score' w='42011' x='57572' y='7094'>
+                    <layout-cache type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='6301' id='33' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]' type-v2='filter' w='21389' x='68821' y='793'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f5f5f5' />
+                </zone-style>
+              </zone>
+              <zone h='6301' id='31' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]' type-v2='filter' w='11249' x='57572' y='793'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f5f5f5' />
+                </zone-style>
+              </zone>
+              <zone h='6301' id='34' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]' type-v2='filter' w='6439' x='51133' y='793'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f5f5f5' />
+                </zone-style>
+              </zone>
+              <zone h='6301' id='36' name='KPI - Default Rate.' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]' show-domain='false' show-null-ctrls='false' show-readout='false' type-v2='filter' values='all' w='9373' x='90210' y='793'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='background-color' value='#f5f5f5' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#dfedeb' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1850' minheight='1850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='38' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98416' id='37' param='vert' type-v2='layout-flow' w='99166' x='417' y='792'>
+                <zone forceUpdate='true' h='5544' id='5' type-v2='text' w='50717' x='417' y='792'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Tableau Light' fontsize='26'>Vehicle Loan Default Risk Management Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='6304' id='36' name='KPI - Default Rate.' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]' show-domain='false' show-null-ctrls='false' show-readout='false' type-v2='filter' values='all' w='9372' x='90211' y='792'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='69' h='9606' id='35' is-fixed='true' name='KPI - Default Rate.' w='20870' x='6511' y='7096'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='69' h='9606' id='12' is-fixed='true' name='KPI - Total Defaulters' w='9323' x='27381' y='7096'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='69' h='9606' id='11' is-fixed='true' name='KPI - Disbursed Amount' w='20870' x='36704' y='7096'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='69' h='9606' id='13' is-fixed='true' name='KPI - Avg CNS Score' w='42009' x='57574' y='7096'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38638' id='14' is-fixed='true' name='Map - State Default Rate' w='50711' x='417' y='16702'>
+                  <layout-cache fixed-size-h='44' minwidth='180' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38635' id='16' is-fixed='true' name='Heatmap - Age &amp; Employment' w='48455' x='51128' y='16702'>
+                  <layout-cache cell-count-h='10' cell-count-w='2' non-cell-size-h='96' non-cell-size-w='81' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43868' id='19' is-fixed='true' name='Scatter - LTV vs Disbursed' w='50716' x='417' y='55340'>
+                  <layout-cache minwidth='163' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='109' h='9606' id='20' name='Scatter - LTV vs Disbursed' pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' type-v2='color' w='6094' x='417' y='7096'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='6304' id='33' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]' type-v2='filter' w='21388' x='68823' y='792'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone h='6304' id='31' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]' type-v2='filter' w='11249' x='57574' y='792'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone h='6304' id='34' mode='dropdown' name='Box - CNS Score' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]' type-v2='filter' w='6440' x='51134' y='792'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f5f5' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43868' id='22' is-fixed='true' name='Box - CNS Score' w='48450' x='51133' y='55340'>
+                  <layout-cache cell-count-w='2' minheight='164' non-cell-size-w='59' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#dfedeb' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{53B7EEDD-757E-4F70-A82F-DAE04FE54CD7}' />
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='30'>
+    <window class='worksheet' name='KPI - Default Rate.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:age:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='checkdropdown' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:perform_cns_score_description:nk]' type='filter' />
+            <card mode='dropdown' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:employment_type:nk]' type='filter' />
+            <card mode='dropdown' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:state_id:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6C6D4F81-6DEC-4271-9DB5-F19436539633}' />
+    </window>
+    <window class='worksheet' name='KPI - Disbursed Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{DE9BE908-812A-4FE8-AC2B-A2BD4C7FFA09}' />
+    </window>
+    <window class='worksheet' name='KPI - Total Defaulters'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0C5B152F-10CE-4983-9DA7-48715A9432A7}' />
+    </window>
+    <window class='worksheet' name='KPI - Avg CNS Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{22CB9BB4-2DAE-483B-BA54-CC86C71172C5}' />
+    </window>
+    <window class='worksheet' name='Map - State Default Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='200'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='37'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{74EA6BB3-1287-4774-B465-1138F980BBCF}' />
+    </window>
+    <window class='worksheet' name='Heatmap - Age &amp; Employment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[usr:Calculation_2241385276218085376:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4D93E547-8B6F-4D81-8D49-965A033CE66C}' />
+    </window>
+    <window class='worksheet' name='Scatter - LTV vs Disbursed'>
+      <cards>
+        <edge name='left'>
+          <strip size='153'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E53ED6A2-8E6B-427F-A81B-084596387789}' />
+    </window>
+    <window class='worksheet' name='Box - CNS Score'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='38'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00wjbho0isxxgv16ssaw40jr8e2j].[none:loan_default:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6D57A916-FC43-4C1A-A4A2-7701DFC09609}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Box - CNS Score'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Heatmap - Age &amp; Employment'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Avg CNS Score'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Default Rate.'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Disbursed Amount'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Total Defaulters'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Map - State Default Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Scatter - LTV vs Disbursed'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='31' />
+      <simple-id uuid='{53F7CA72-EFE0-42EA-8AB4-A2836DCEFA0F}' />
+    </window>
+  </windows>
+</workbook>
