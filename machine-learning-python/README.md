@@ -12,12 +12,16 @@ Predicting vehicle test times to enhance manufacturing efficiency.
 2️⃣ [Employee Turnover Prediction (Classification & Clustering)](./employee-turnover-prediction)  
 Identifying at-risk employees and uncovering attrition drivers for HR strategies.
 
+3️⃣ [Song Cohort Creation (Clustering)](./song-cohort-creation)  
+Segmenting songs into thematic groups using unsupervised learning for recommendation engines.
+
 ---
 
 ## Tools
 - Python
 - Pandas, NumPy, Matplotlib, Seaborn
 - scikit-learn, XGBoost, imblearn
+- Spotify API
 
 ---
 
