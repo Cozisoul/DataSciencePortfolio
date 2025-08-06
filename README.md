@@ -30,7 +30,7 @@ This section contains projects and coursework completed as part of my ongoing de
 | [Data Science with R](./data-science-r) | R | Statistical and predictive analysis. |
 | [SQL Certification](./sql-certification) | SQL | Query-based data analysis projects. |
 | [Power BI Certification](./powerbi-certification) | Power BI | Dashboard creation and storytelling with data. |
-| [Machine Learning with Python](./machine-learning-python) | Python | (In Progress) Machine learning pipelines. |
+| [Machine Learning with Python](./machine-learning-python) | Python | Machine learning pipelines. |
 
 ---
 
